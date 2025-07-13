@@ -14,6 +14,7 @@ Holux M241使用的是聯發科MTK3318晶片，通訊協定標準是NMEA0183 v3.
 #### 安裝驅動(Win)
 因為公司已經倒閉，官網已經關閉，所以網路上找不到官方出的支援Windows的驅動。
 而可以借用[Silocon Labs](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)的[CP210x驅動](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip)來驅動Holux M241。 
+
 備份下載點：[CP210x_Windows_Drivers.zip](./CP210x_Windows_Drivers.zip)
 
 接壓縮壓縮檔之後，直接在**slabvcp.inf**按滑鼠右鍵，選擇**安裝(I)**
@@ -53,7 +54,7 @@ MacOS也可以借用[Silocon Labs](https://www.silabs.com/developer-tools/usb-to
 
 解壓縮後，掛載**SiLabsUSBDriverDisk.dmg**，並且直接安裝。
 過程會需要輸入管理者密碼和允許一些電腦權限
-之後接上M-241後，應該可以在 **/dev/**下面看到**tty.SLAB_USBtoUART**。
+之後接上M-241後，應該可以在 **/dev/** 下面看到**tty.SLAB_USBtoUART**。
 ![m241_usb_macos](./picture/m241_usb_macos.png)
 
 #### 安裝套件 (houdahGPS)
@@ -77,7 +78,7 @@ OSX 10.10之前的MacOS版本下載[HoudahGPS 6.0](https://www.houdah.com/houdah
 
 ![m241_usb_macos](./picture/houdahGPS_macos.png)
 
-然後點選Import
+然後點選**Import**
 
 ##### 轉換軌跡格式
 
