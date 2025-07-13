@@ -31,32 +31,52 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 
 安裝方式：
 
-1. 解壓縮檔案
-2. 對 `slabvcp.inf` 右鍵 → 選擇「安裝」
+1. 解壓縮檔案  
+2. 對 `slabvcp.inf` 右鍵 → 選擇「安裝」  
 3. 插入 M-241 裝置後，應會在 **裝置管理員 > 連接埠（COM 和 LPT）** 看到 `Silicon Labs CP210x` 以及對應的 COM Port
 
-📷 如圖（COM6）  
+📷 如圖（COM6）：  
 ![Device Manager](./picture/device_manager.PNG)
 
 ---
 
 ### GPS 軟體工具
 
-來自以下網站：  
-[http://4river.a.la9.jp/gps/indexj.htm](http://4river.a.la9.jp/gps/indexj.htm)  
-可即開即用，無須安裝：
+來源：[http://4river.a.la9.jp/gps/indexj.htm](http://4river.a.la9.jp/gps/indexj.htm)
 
-- **MtkDLut**  
-  - 功能：讀取 GPS 狀態、下載/刪除軌跡、重置 GPS 設定（hot/warm/cold）  
-  - 📥 備份載點：[MtkDLut336.zip](./MtkDLut336.zip)
+#### MtkDLut
 
-- **NMEA2KMZ**  
-  - 功能：軌跡格式轉換（KML/KMZ/GPX/NMEA/CSV）  
-  - 📥 備份載點：[NMEA2KMZ342.zip](./NMEA2KMZ342.zip)
+- 功能：讀取 GPS 狀態、下載/刪除軌跡、重置 GPS 設定（hot/warm/cold）  
+- 📥 備份載點：[MtkDLut336.zip](./MtkDLut336.zip)
+- 使用方式：
+  - 設定 Baud Rate 為 **38400**，點擊 **Scan**
+    ![MtkDLut_scan](./picture/MtkDLut_scan.PNG)
+  - 成功連接裝置畫面：
+    ![MtkDLut_main](./picture/MtkDLut_main.PNG)
+  - **Log Download** 頁面操作：
+    ![MtkDLut_control](./picture/MtkDLut_control.PNG)
+  - **Log Setting** 頁面設定：
+    ![MtkDLut_setting](./picture/MtkDLut_setting.PNG)
 
-- **NMEA**  
-  - 功能：讀取 GPS 狀態、即時紀錄/重播軌跡  
-  - 📥 備份載點：[NMEA407.zip](./NMEA407.zip)
+#### NMEA2KMZ
+
+- 功能：軌跡格式轉換（KML/KMZ/GPX/NMEA/CSV）  
+- 📥 備份載點：[NMEA2KMZ342.zip](./NMEA2KMZ342.zip)
+- 使用方式：
+  - 選擇軌跡檔案，於 **Output File type** 勾選格式，點選 **Convert**
+    ![NMEA2KMZ](./picture/NMEA2KMZ.PNG)
+
+#### NMEA
+
+- 功能：讀取 GPS 狀態、即時紀錄/重播軌跡  
+- 📥 備份載點：[NMEA407.zip](./NMEA407.zip)
+- 使用方式：
+  - 設定正確的 COM PORT，Baud Rate 設為 **38400**，點選 **OK**
+    ![NMEA_setting](./picture/NMEA_setting.PNG)
+  - 成功連接及定位畫面：
+    ![NMEA_main](./picture/NMEA.PNG)
+  - 透過「ファイル」選單可進行記錄／停止／重播操作：
+    ![NMEA_record](./picture/NMEA_record.PNG)
 
 ---
 
@@ -71,9 +91,9 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 
 安裝方式：
 
-1. 解壓縮並掛載 `SiLabsUSBDriverDisk.dmg`
-2. 安裝並授權安全性權限（可能需輸入管理者密碼）
-3. 裝置連接後，會出現 `/dev/tty.SLAB_USBtoUART`
+1. 解壓縮並掛載 `SiLabsUSBDriverDisk.dmg`  
+2. 安裝並授權安全性權限（需輸入管理者密碼）  
+3. 插入裝置後，應可見 `/dev/tty.SLAB_USBtoUART`
 
 📷 如圖：  
 ![macOS USB](./picture/m241_usb_macos.png)
@@ -84,7 +104,7 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 
 官網：[https://www.houdah.com/houdahGPS/](https://www.houdah.com/houdahGPS/)
 
-免費 GUI 軟體，基於 GPSBabel。下載版本依 macOS 版本選擇：
+免費 GUI 工具，基於 GPSBabel。依 macOS 版本選擇：
 
 - macOS 10.10 或更新：  
   [HoudahGPS 8.1.3](https://www.houdah.com/houdahGPS/download_assets/HoudahGPS8.1.3.zip)  
@@ -98,15 +118,15 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 
 ### 使用 houdahGPS 匯出軌跡
 
-打開 houdahGPS，設定如下：
+開啟 houdahGPS，進行以下設定：
 
 - **Preset**：Holux  
 - **Port**：USB  
-- **Names**：SLAB_USBtoUART（依實際裝置）  
-- **Option**：可留空（如勾選將清除裝置軌跡）  
-- **Output**：GPX / KML / KMZ（可選）
+- **Names**：SLAB_USBtoUART（依裝置顯示名稱）  
+- **Option**：可留空（勾選則會自動刪除裝置軌跡）  
+- **Output**：GPX / KML / KMZ（任選）
 
-📷 操作介面示意圖：  
+📷 操作介面：  
 ![houdahGPS](./picture/houdahGPS_macos.png)
 
 按下 **Import** 即可下載軌跡資料。
