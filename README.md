@@ -50,7 +50,7 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 #### MtkDLut
 
 - 功能：讀取 GPS 狀態、下載/刪除軌跡、重置 GPS 設定（hot/warm/cold）  
-- 📦 備份載點：[MtkDLut336.zip](./MtkDLut336.zip)
+- 📦 [MtkDLut336.zip](http://4river.a.la9.jp/gps/file/MtkDLut336.zip) / 備份載點：[MtkDLut336.zip](./MtkDLut336.zip)
 - 使用方式：
   - 設定 Baud Rate 為 **38400**，點擊 **Scan**
     ![MtkDLut_scan](./picture/MtkDLut_scan.PNG)
@@ -64,7 +64,7 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 #### NMEA2KMZ
 
 - 功能：軌跡格式轉換（KML/KMZ/GPX/NMEA/CSV）  
-- 📦 備份載點：[NMEA2KMZ342.zip](./NMEA2KMZ342.zip)
+- 📦 [NMEA2KMZ342.zip](http://4river.a.la9.jp/gps/file/NMEA2KMZ342.zip) / 備份載點：[NMEA2KMZ342.zip](./NMEA2KMZ342.zip)
 - 使用方式：
   - 選擇軌跡檔案，於 **Output File type** 勾選格式，點選 **Convert**
     ![NMEA2KMZ](./picture/NMEA2KMZ.PNG)
@@ -72,7 +72,7 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 #### NMEA
 
 - 功能：讀取 GPS 狀態、即時紀錄/重播軌跡  
-- 📦 備份載點：[NMEA407.zip](./NMEA407.zip)
+- 📦 [NMEA407.zip](http://4river.a.la9.jp/gps/file/NMEA407.zip) / 備份載點：[NMEA407.zip](./NMEA407.zip)
 - 使用方式：
   - 設定正確的 COM PORT，Baud Rate 設為 **38400**，點選 **OK**
     ![NMEA_setting](./picture/NMEA_setting.PNG)
