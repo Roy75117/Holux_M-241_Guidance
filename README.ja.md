@@ -50,7 +50,7 @@ Holux M-241 は MediaTek MTK3318 チップを採用し、NMEA0183 v3.1 通信プ
 #### MtkDLut
 
 - 機能：GPSステータスの読み取り、トラックのダウンロード/削除、GPS設定のリセット（ホット/ウォーム/コールド）
-- 📦 バックアップダウンロード：[MtkDLut336.zip](./MtkDLut336.zip)
+- 📦 [MtkDLut](http://4river.a.la9.jp/gps/file/MtkDLutj.htm) / バックアップダウンロード：[MtkDLut336.zip](./MtkDLut336.zip)
 - 使用方法：
   - ボーレートを**38400**に設定し、**Scan**をクリックします。
     ![MtkDLut_scan](./picture/MtkDLut_scan.PNG)
@@ -64,7 +64,7 @@ Holux M-241 は MediaTek MTK3318 チップを採用し、NMEA0183 v3.1 通信プ
 #### NMEA2KMZ
 
 - 機能：トラック形式の変換（KML/KMZ/GPX/NMEA/CSV）
-- 📦 バックアップダウンロード：[NMEA2KMZ342.zip](./NMEA2KMZ342.zip)
+- 📦 [NMEA2KMZ](http://4river.a.la9.jp/gps/file/nmea2kmzj.htm) / バックアップダウンロード：[NMEA2KMZ342.zip](./NMEA2KMZ342.zip)
 - 使用方法：
   - トラックファイルを選択し、**Output File type** で形式をチェックし、**Convert** をクリックします。
     ![NMEA2KMZ](./picture/NMEA2KMZ.PNG)
@@ -72,7 +72,7 @@ Holux M-241 は MediaTek MTK3318 チップを採用し、NMEA0183 v3.1 通信プ
 #### NMEA
 
 - 機能：GPSステータスの読み取り、リアルタイムのトラック記録/再生
-- 📦 バックアップダウンロード：[NMEA407.zip](./NMEA407.zip)
+- 📦 [NMEA](http://4river.a.la9.jp/gps/file/NmeaMonj.htm) / バックアップダウンロード：[NMEA407.zip](./NMEA407.zip)
 - 使用方法：
   - 正しいCOM PORTを設定し、ボーレートを**38400**に設定し、**OK**をクリックします。
     ![NMEA_setting](./picture/NMEA_setting.PNG)

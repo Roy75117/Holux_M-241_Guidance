@@ -50,7 +50,7 @@ Source: [http://4river.a.la9.jp/gps/indexj.htm](http://4river.a.la9.jp/gps/index
 #### MtkDLut
 
 - Functions: Read GPS status, download/delete tracks, reset GPS settings (hot/warm/cold)
-- 📦 Backup Download: [MtkDLut336.zip](./MtkDLut336.zip)
+- 📦 [MtkDLut](http://4river.a.la9.jp/gps/file/MtkDLutj.htm) / Backup Download: [MtkDLut336.zip](./MtkDLut336.zip)
 - Usage:
   - Set Baud Rate to **38400**, click **Scan**
     ![MtkDLut_scan](./picture/MtkDLut_scan.PNG)
@@ -64,7 +64,7 @@ Source: [http://4river.a.la9.jp/gps/indexj.htm](http://4river.a.la9.jp/gps/index
 #### NMEA2KMZ
 
 - Functions: Track format conversion (KML/KMZ/GPX/NMEA/CSV)
-- 📦 Backup Download: [NMEA2KMZ342.zip](./NMEA2KMZ342.zip)
+- 📦 [NMEA2KMZ](http://4river.a.la9.jp/gps/file/nmea2kmzj.htm) / Backup Download: [NMEA2KMZ342.zip](./NMEA2KMZ342.zip)
 - Usage:
   - Select the track file, check the format under **Output File type**, click **Convert**
     ![NMEA2KMZ](./picture/NMEA2KMZ.PNG)
@@ -72,7 +72,7 @@ Source: [http://4river.a.la9.jp/gps/indexj.htm](http://4river.a.la9.jp/gps/index
 #### NMEA
 
 - Functions: Read GPS status, real-time record/replay tracks
-- 📦 Backup Download: [NMEA407.zip](./NMEA407.zip)
+- 📦 [NMEA](http://4river.a.la9.jp/gps/file/NmeaMonj.htm) / Backup Download: [NMEA407.zip](./NMEA407.zip)
 - Usage:
   - Set the correct COM PORT, set Baud Rate to **38400**, click **OK**
     ![NMEA_setting](./picture/NMEA_setting.PNG)
