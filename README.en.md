@@ -1,4 +1,6 @@
 <div align="center"><p><a href="./README.en.md"><img src="https://img.shields.io/badge/EN-white" alt="version"></a> <a href="./README.md"><img src="https://img.shields.io/badge/繁中-white" alt="version"></a> <a href="./README.ja.md"><img src="https://img.shields.io/badge/日本語-white" alt="version"></a> </p></div>
+<!--多國語言tab寫法-->
+<!--https://github.com/OpenAiTx/OpenAiTx/blob/main/README.md-->
 
 # Holux M-241 User Guide (Windows 11 & Apple Silicon)
 
