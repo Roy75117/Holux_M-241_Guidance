@@ -26,8 +26,7 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 
 由於官方驅動無法取得，可改用 [Silicon Labs](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) 提供的 [CP210x 驅動程式](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip)。
 
-📦 備份載點：  
-[CP210x_Windows_Drivers.zip](./CP210x_Windows_Drivers.zip)
+📦 備份載點：[CP210x_Windows_Drivers.zip](./CP210x_Windows_Drivers.zip)
 
 安裝方式：
 
@@ -47,13 +46,13 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 #### MtkDLut
 
 - 功能：讀取 GPS 狀態、下載/刪除軌跡、重置 GPS 設定（hot/warm/cold）  
-- 📥 備份載點：[MtkDLut336.zip](./MtkDLut336.zip)
+- 📦 備份載點：[MtkDLut336.zip](./MtkDLut336.zip)
 - 使用方式：
   - 設定 Baud Rate 為 **38400**，點擊 **Scan**
     ![MtkDLut_scan](./picture/MtkDLut_scan.PNG)
-  - 成功連接裝置畫面：
+  - 成功連接裝置畫面(顯示目前裝置GPS狀態、重置裝置GPS設定)：
     ![MtkDLut_main](./picture/MtkDLut_main.PNG)
-  - **Log Download** 頁面操作：
+  - **Log Download** 頁面操作(下載軌跡、刪除軌跡)：
     ![MtkDLut_control](./picture/MtkDLut_control.PNG)
   - **Log Setting** 頁面設定：
     ![MtkDLut_setting](./picture/MtkDLut_setting.PNG)
@@ -61,7 +60,7 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 #### NMEA2KMZ
 
 - 功能：軌跡格式轉換（KML/KMZ/GPX/NMEA/CSV）  
-- 📥 備份載點：[NMEA2KMZ342.zip](./NMEA2KMZ342.zip)
+- 📦 備份載點：[NMEA2KMZ342.zip](./NMEA2KMZ342.zip)
 - 使用方式：
   - 選擇軌跡檔案，於 **Output File type** 勾選格式，點選 **Convert**
     ![NMEA2KMZ](./picture/NMEA2KMZ.PNG)
@@ -69,7 +68,7 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 #### NMEA
 
 - 功能：讀取 GPS 狀態、即時紀錄/重播軌跡  
-- 📥 備份載點：[NMEA407.zip](./NMEA407.zip)
+- 📦 備份載點：[NMEA407.zip](./NMEA407.zip)
 - 使用方式：
   - 設定正確的 COM PORT，Baud Rate 設為 **38400**，點選 **OK**
     ![NMEA_setting](./picture/NMEA_setting.PNG)
@@ -84,8 +83,7 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 
 ### 驅動程式安裝（macOS）
 
-同樣可使用 Silicon Labs 的驅動程式：  
-[Mac_OSX_VCP_Driver.zip](https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip)
+同樣可使用 Silicon Labs 的驅動程式：[Mac_OSX_VCP_Driver.zip](https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip)
 
 📦 備份載點：[macOS_VCP_Driver.zip](./macOS_VCP_Driver.zip)
 
@@ -106,13 +104,11 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 
 免費 GUI 工具，基於 GPSBabel。依 macOS 版本選擇：
 
-- macOS 10.10 或更新：  
-  [HoudahGPS 8.1.3](https://www.houdah.com/houdahGPS/download_assets/HoudahGPS8.1.3.zip)  
-  📥 備份載點：[HoudahGPS8.1.3.zip](./HoudahGPS8.1.3.zip)
+- macOS 10.10 或更新：[HoudahGPS 8.1.3](https://www.houdah.com/houdahGPS/download_assets/HoudahGPS8.1.3.zip)  
+  📦 備份載點：[HoudahGPS8.1.3.zip](./HoudahGPS8.1.3.zip)
 
-- macOS 10.10 以下：  
-  [HoudahGPS 6.0](https://www.houdah.com/houdahGPS/download_assets/HoudahGPS6.0.zip)  
-  📥 備份載點：[HoudahGPS6.0.zip](./HoudahGPS6.0.zip)
+- macOS 10.10 以下：[HoudahGPS 6.0](https://www.houdah.com/houdahGPS/download_assets/HoudahGPS6.0.zip)  
+  📦 備份載點：[HoudahGPS6.0.zip](./HoudahGPS6.0.zip)
 
 ---
 
@@ -123,8 +119,9 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 - **Preset**：Holux  
 - **Port**：USB  
 - **Names**：SLAB_USBtoUART（依裝置顯示名稱）  
-- **Option**：可留空（勾選則會自動刪除裝置軌跡）  
-- **Output**：GPX / KML / KMZ（任選）
+- **Option**：可留空（勾選則會自動刪除裝置軌跡）
+- **Data**：Track Logs & Waypoints
+- **Output**：GPX / KML / NMEA（任選）
 
 📷 操作介面：  
 ![houdahGPS](./picture/houdahGPS_macos.png)
