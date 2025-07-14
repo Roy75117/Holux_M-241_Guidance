@@ -134,6 +134,57 @@ Holux M-241 採用聯發科 MTK3318 晶片，使用 NMEA0183 v3.1 通訊協定�
 
 ---
 
+## GPX 檔案重新採點工具指南
+
+本章節提供兩種重新採樣（Resampling）GPX 軌跡檔的解決方案，分別適用於不同平台。
+
+---
+
+### ✅ 方法一：使用 GPS Track Editor（僅限 Windows）
+
+📥 官方網站：[GPS Track Editor](http://www.gpstrackeditor.com/)  
+📦 下載程式：[GPS Track Editor 1.15](http://www.gpstrackeditor.com/transfer/GpsTrackEditor-1.15.141.exe)  
+📁 備用載點：[GpsTrackEditor-1.15.141.exe](./GpsTrackEditor-1.15.141.exe)
+
+#### 使用步驟：
+
+1. 下載並執行安裝檔（`GpsTrackEditor-1.15.141.exe`）  
+2. 安裝完成後啟動程式  
+3. 開啟目標 GPX 檔案  
+   ![open track](./picture/open_track.PNG)  
+4. 從上方選單選取 `Track → Increase Frequency`  
+   ![resampling](./picture/resampling.PNG)  
+5. 輸入欲重新採樣的間距（例如：200 公尺）  
+   ![resampling dist](./picture/resampling_dist.PNG)  
+
+---
+
+### 🐍 方法二：使用 Python 腳本（Windows / macOS / Linux）
+
+`resample_gpx.py` 是一個基於 Python 的指令列工具，可自訂採樣間距。
+
+📦 下載腳本：[resample_gpx.py](./resample_gpx.py)
+
+#### 安裝依賴套件（以 Ubuntu 為例）：
+
+```bash
+sudo apt update
+sudo apt install python3-pip
+pip install gpxpy geopy numpy
+```
+
+#### 使用方式：
+
+```bash
+python3 resample_gpx.py input_file.gpx output_file.gpx [distance]
+```
+
+- `input_file`：必填，輸入 GPX 檔案路徑  
+- `output_file`：必填，輸出 GPX 檔案路徑  
+- `distance`：選填，目標採樣間距（單位：公尺），預設為 200 公尺
+
+---
+
 ## 參考資料
 
 - [OpenStreetMap Wiki - Holux M-241 (JA)](https://wiki.openstreetmap.org/wiki/JA:Holux_M-241)
