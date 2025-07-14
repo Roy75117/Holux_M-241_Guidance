@@ -134,6 +134,57 @@ Press **Import** to download track data.
 
 ---
 
+## GPX File Resampling Tool Guide
+
+This part provides two solutions for resampling GPX track files, suitable for different platforms.
+
+---
+
+### ✅ Method 1: Using GPS Track Editor (Windows Only)
+
+📥 Official Website: [GPS Track Editor](http://www.gpstrackeditor.com/)  
+📦 Download Program: [GPS Track Editor 1.15](http://www.gpstrackeditor.com/transfer/GpsTrackEditor-1.15.141.exe)  
+📁 Alternative Download: [GpsTrackEditor-1.15.141.exe](./GpsTrackEditor-1.15.141.exe)
+
+#### Usage Steps:
+
+1. Download and run the installer (`GpsTrackEditor-1.15.141.exe`)  
+2. Launch the program after installation  
+3. Open the target GPX file  
+   ![open track](./picture/open_track.PNG)  
+4. From the top menu, select `Track → Increase Frequency`  
+   ![resampling](./picture/resampling.PNG)  
+5. Enter the desired resampling distance (e.g., 200 meters)  
+   ![resampling dist](./picture/resampling_dist.PNG)  
+
+---
+
+### 🐍 Method 2: Using Python Script (Windows / macOS / Linux)
+
+`resample_gpx.py` is a command-line tool based on Python that allows customizable resampling distances.
+
+📦 Download Script: [resample_gpx.py](./resample_gpx.py)
+
+#### Install Dependencies (Example for Ubuntu):
+
+```bash
+sudo apt update
+sudo apt install python3-pip
+pip install gpxpy geopy numpy
+```
+
+#### Usage:
+
+```bash
+python3 resample_gpx.py input_file.gpx output_file.gpx [distance]
+```
+
+- `input_file`: Required, path to the input GPX file  
+- `output_file`: Required, path to the output GPX file  
+- `distance`: Optional, target resampling distance (in meters), default is 200 meters
+
+---
+
 ## References
 
 - [OpenStreetMap Wiki - Holux M-241 (JA)](https://wiki.openstreetmap.org/wiki/JA:Holux_M-241)

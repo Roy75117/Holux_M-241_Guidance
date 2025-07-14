@@ -134,6 +134,57 @@ houdahGPS を開き、以下の設定を行います。
 
 ---
 
+## GPXファイル再サンプリングツールガイド
+
+このセクションでは、GPXトラックファイルを再サンプリングするための2つの方法を提供します。それぞれ異なるプラットフォームに対応しています。
+
+---
+
+### ✅ 方法1：GPS Track Editorを使用（Windows専用）
+
+📥 公式ウェブサイト：[GPS Track Editor](http://www.gpstrackeditor.com/)  
+📦 プログラムのダウンロード：[GPS Track Editor 1.15](http://www.gpstrackeditor.com/transfer/GpsTrackEditor-1.15.141.exe)  
+📁 代替ダウンロードリンク：[GpsTrackEditor-1.15.141.exe](./GpsTrackEditor-1.15.141.exe)
+
+#### 使用手順：
+
+1. インストールファイル（`GpsTrackEditor-1.15.141.exe`）をダウンロードして実行  
+2. インストール完了後、プログラムを起動  
+3. 対象のGPXファイルを開く  
+   ![トラックのオープン](./picture/open_track.PNG)  
+4. 上部メニューから `Track → Increase Frequency` を選択  
+   ![再サンプリング](./picture/resampling.PNG)  
+5. 希望する再サンプリング間隔（例：200メートル）を入力  
+   ![再サンプリング間隔](./picture/resampling_dist.PNG)  
+
+---
+
+### 🐍 方法2：Pythonスクリプトを使用（Windows / macOS / Linux）
+
+`resample_gpx.py` は、カスタマイズ可能なサンプリング間隔を備えたPythonベースのコマンドラインツールです。
+
+📦 スクリプトのダウンロード：[resample_gpx.py](./resample_gpx.py)
+
+#### 依存パッケージのインストール（Ubuntuを例に）：
+
+```bash
+sudo apt update
+sudo apt install python3-pip
+pip install gpxpy geopy numpy
+```
+
+#### 使用方法：
+
+```bash
+python3 resample_gpx.py input_file.gpx output_file.gpx [distance]
+```
+
+- `input_file`：必須、入力GPXファイルのパス  
+- `output_file`：必須、出力GPXファイルのパス  
+- `distance`：オプション、目標サンプリング間隔（単位：メートル）、デフォルトは200メートル
+
+---
+
 ## 参考文献
 
 - [OpenStreetMap Wiki - Holux M-241 (JA)](https://wiki.openstreetmap.org/wiki/JA:Holux_M-241)
