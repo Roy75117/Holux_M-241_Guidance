@@ -96,11 +96,12 @@ def main():
     parser.add_argument("output_file", help="Path to the output GPX file")
     parser.add_argument("distance", type=float, default=200, nargs='?', help="Target distance between points (in meters, default is 200)")
     args = parser.parse_args()
-    resample_gpx(args.input_file, args.output_file, args.distance)
 
     if args.distance <= 0:
         print("Error: Target distance must be positive")
         return
+        
+    resample_gpx(args.input_file, args.output_file, args.distance)
 
 if __name__ == "__main__":
     main()
