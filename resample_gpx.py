@@ -4,12 +4,33 @@ from geopy.distance import geodesic
 from datetime import timedelta
 import argparse
 
+def unwrap_longitude(lon1, lon2):
+    # Adjust lon2 so that it's continuous with respect to lon1
+    delta = lon2 - lon1
+    if delta > 180:
+        lon2 -= 360
+    elif delta < -180:
+        lon2 += 360
+    return lon2
+
 def calculate_distance(point1, point2):
-    return geodesic((point1.latitude, point1.longitude), (point2.latitude, point2.longitude)).meters
+    lon1, lon2 = point1.longitude, point2.longitude
+    lon2 = unwrap_longitude(lon1, lon2)
+    return geodesic((point1.latitude, lon1), (point2.latitude, lon2)).meters
 
 def interpolate_point(p1, p2, ratio):
+    lon1 = p1.longitude
+    lon2 = unwrap_longitude(lon1, p2.longitude)
+
     lat = p1.latitude + (p2.latitude - p1.latitude) * ratio
-    lon = p1.longitude + (p2.longitude - p1.longitude) * ratio
+    lon = lon1 + (lon2 - lon1) * ratio
+
+    # Normalize lon to [-180, 180] after interpolation
+    if lon > 180:
+        lon -= 360
+    elif lon < -180:
+        lon += 360
+
     ele = None
     if p1.elevation is not None and p2.elevation is not None:
         ele = p1.elevation + (p2.elevation - p1.elevation) * ratio
@@ -62,10 +83,10 @@ def resample_gpx(input_file, output_file, target_distance):
 
     with open(output_file, 'w') as f:
         f.write(new_gpx.to_xml())
-    print(f"Improved GPX saved to: {output_file}")
+    print(f"IDL-fixed GPX saved to: {output_file}")
 
 def main():
-    parser = argparse.ArgumentParser(description="Improved GPX resampler with better curve fidelity.")
+    parser = argparse.ArgumentParser(description="GPX resampler with IDL handling.")
     parser.add_argument("input_file", help="Input GPX file")
     parser.add_argument("output_file", help="Output GPX file")
     parser.add_argument("distance", type=float, help="Target spacing in meters")
