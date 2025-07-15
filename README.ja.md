@@ -185,6 +185,16 @@ python3 resample_gpx.py input_file.gpx output_file.gpx [distance]
 
 ---
 
+## 役立つリンク
+
+- [GPS Visualizer](https://www.gpsvisualizer.com/)
+- [Kml2gpx.com: convert kml to gpx online. It's free, simple and fast](https://kml2gpx.com/)
+- [FlightAware - Flight Tracker / Flight Status](https://www.flightaware.com/)
+- [GPXLAB - GPS Track Editor](https://app.gpxlab.net/)
+- [gpx.studio — the online GPX file editor](https://gpx.studio/)
+
+---
+
 ## 参考文献
 
 - [OpenStreetMap Wiki - Holux M-241 (JA)](https://wiki.openstreetmap.org/wiki/JA:Holux_M-241)
