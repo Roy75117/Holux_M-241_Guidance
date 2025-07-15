@@ -75,10 +75,12 @@ Source: [http://4river.a.la9.jp/gps/indexj.htm](http://4river.a.la9.jp/gps/index
 - 📦 [NMEA](http://4river.a.la9.jp/gps/file/NmeaMonj.htm) / Backup Download: [NMEA407.zip](./NMEA407.zip)
 - Usage:
   - Set the correct COM PORT, set Baud Rate to **38400**, click **OK**
+
     ![NMEA_setting](./picture/NMEA_setting.PNG)
   - Successfully connected and positioned screen:
     ![NMEA_main](./picture/NMEA.PNG)
   - Record/stop/replay operations can be performed via the "ファイル" (File) menu:
+
     ![NMEA_record](./picture/NMEA_record.PNG)
 
 ---
