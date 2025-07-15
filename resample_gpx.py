@@ -53,6 +53,7 @@ def resample_gpx(input_file, output_file, target_distance):
     for track in gpx.tracks:
         for segment in track.segments:
             if not segment.points:
+                print(f"Warning: Track segment is empty, skipping")
                 continue
             points = segment.points
             last_point = points[0]
@@ -81,17 +82,25 @@ def resample_gpx(input_file, output_file, target_distance):
             if last_point != new_segment.points[-1]:
                 new_segment.points.append(last_point)
 
-    with open(output_file, 'w') as f:
-        f.write(new_gpx.to_xml())
-    print(f"IDL-fixed GPX saved to: {output_file}")
+    # Save the new GPX file
+    try:    
+        with open(output_file, 'w') as f:
+            f.write(new_gpx.to_xml())
+        print(f"Successfully generated resampled GPX file: '{output_file}'")
+    except Exception as e:
+        print(f"Error saving GPX file: {e}")
 
 def main():
-    parser = argparse.ArgumentParser(description="GPX resampler with IDL handling.")
-    parser.add_argument("input_file", help="Input GPX file")
-    parser.add_argument("output_file", help="Output GPX file")
-    parser.add_argument("distance", type=float, help="Target spacing in meters")
+    parser = argparse.ArgumentParser(description="Resample a GPX file to a specified point interval (in meters).")
+    parser.add_argument("input_file", help="Path to the input GPX file")
+    parser.add_argument("output_file", help="Path to the output GPX file")
+    parser.add_argument("distance", type=float, default=200, nargs='?', help="Target distance between points (in meters, default is 200)")
     args = parser.parse_args()
     resample_gpx(args.input_file, args.output_file, args.distance)
+
+    if args.distance <= 0:
+        print("Error: Target distance must be positive")
+        return
 
 if __name__ == "__main__":
     main()
