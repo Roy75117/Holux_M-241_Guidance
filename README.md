@@ -191,3 +191,13 @@ python3 resample_gpx.py input_file.gpx output_file.gpx [distance]
 - [Yamareco 軌跡使用經驗](https://www.yamareco.com/modules/yamanote/detail.php?nid=2428)
 - [Ushirotaro 部落格](https://ushirotaro.hatenablog.com/entry/2021/05/23/223821)
 - [山2733的 HOLUX 網頁](https://www.katch.ne.jp/~yama2733/Holuxm/HOLUXM.htm)
+
+---
+
+## 常用網址
+
+- [GPS Visualizer](https://www.gpsvisualizer.com/)
+- [Kml2gpx.com: convert kml to gpx online. It's free, simple and fast](https://kml2gpx.com/)
+- [FlightAware - Flight Tracker / Flight Status](https://www.flightaware.com/)
+- [GPXLAB - GPS Track Editor](https://app.gpxlab.net/)
+- [gpx.studio — the online GPX file editor](https://gpx.studio/)
