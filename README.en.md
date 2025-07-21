@@ -6,7 +6,7 @@
 
 ## Preface
 
-The Holux M-241 has been discontinued, and the original company has also been dissolved. Information can only be obtained online.
+The Holux M-241 has been discontinued, and the original company has also been dissolved. Information can only be obtained online community.
 This page describes how to use the Holux M-241 on Windows 11 and Apple Silicon (e.g., MacBook Air M3), including:
 
 - Driver installation
